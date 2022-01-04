@@ -30,7 +30,7 @@ $.getJSON(searchName, function(data) {
     
     //friends
     if(data.hasOwnProperty('people')){
-        document.getElementById("people").textContent = "people: " + data.people;
+        document.getElementById("people").textContent = "contacts: " + data.people;
     }
     else
     {
