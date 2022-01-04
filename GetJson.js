@@ -2,6 +2,10 @@ function getData(searchName){
 $.getJSON(searchName, function(data) {
     // JSON result in data
     
+    //auto hides//
+    document.getElementById("Neos").hidden = true;
+
+
     //set url field
     document.getElementById("site").textContent = "url: " + data.site;
 
@@ -46,17 +50,23 @@ $.getJSON(searchName, function(data) {
         document.getElementById("friendCount").textContent = "0 friends";
     }
 
-    //*neos*//
+//*extensions*//
+if(data.hasOwnProperty('extensions')){
 
+//*socail media*//
+if(data.extensions.hasOwnProperty('socialMedia')){
+
+    //*neos*//
+    if(data.extensions.socialMedia.hasOwnProperty('neos')){
+    document.getElementById("Neos").hidden = false;
+    
     //neos username
     if(data.extensions.socialMedia.neos.hasOwnProperty('username')){
         document.getElementById("neosName").textContent = "Username: " + data.extensions.socialMedia.neos.username;
-        document.getElementById("neosName").hidden = false;
     }
     else
     {
         document.getElementById("neosName").textContent = "NO NEOS ACCOUNT FOUND";
-        document.getElementById("neosName").hidden = true;
     }
 
     //neos user-id
@@ -67,7 +77,9 @@ $.getJSON(searchName, function(data) {
     {
         document.getElementById("neosUserID").textContent = "";
     }
-
+}
+}
+}
 
 });
 }
