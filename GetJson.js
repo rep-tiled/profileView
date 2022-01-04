@@ -67,7 +67,7 @@ if(data.extensions.hasOwnProperty('socialMedia')){
     }
     else
     {
-        document.getElementById("neosName").textContent = "NO NEOS ACCOUNT FOUND";
+        document.getElementById("neosName").textContent = "";
     }
 
     //neos user-id
