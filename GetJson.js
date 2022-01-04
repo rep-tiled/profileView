@@ -72,7 +72,7 @@ if(data.extensions.hasOwnProperty('socialMedia')){
 
     //neos user-id
     if(data.extensions.socialMedia.neos.hasOwnProperty('userID')){
-        document.getElementById("neosUserID").textContent =  data.extensions.socialMedia.neos.userID;
+        document.getElementById("neosUserID").textContent =  "UserID: " + data.extensions.socialMedia.neos.userID;
     }
     else
     {
