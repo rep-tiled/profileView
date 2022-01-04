@@ -14,6 +14,11 @@ $.getJSON(searchName, function(data) {
         document.getElementById("name").textContent = "Name: " + data.site;
     }
     
+    //pfp
+    if(data.hasOwnProperty('image')){
+        document.getElementById('pfp').src=data.image;
+    }
+
     //set pronouns field
     if(data.hasOwnProperty('pronouns')){
         document.getElementById("pronouns").textContent = "pronouns: " + data.pronouns;
@@ -41,6 +46,8 @@ $.getJSON(searchName, function(data) {
         document.getElementById("friendCount").textContent = "0 friends";
     }
 
+    //*neos*//
+
     //neos username
     if(data.extensions.socialMedia.neos.hasOwnProperty('username')){
         document.getElementById("neosName").textContent = "Username: " + data.extensions.socialMedia.neos.username;
@@ -60,6 +67,8 @@ $.getJSON(searchName, function(data) {
     {
         document.getElementById("neosUserID").textContent = "";
     }
+
+
 });
 }
 //rep-tiled.tk//
