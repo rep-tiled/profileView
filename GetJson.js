@@ -52,6 +52,7 @@ $.getJSON(searchName, function(data) {
 
 //*extensions*//
 if(data.hasOwnProperty('extensions')){
+    console.log("extensions found"); //console log for if user has extensions
 
 //*socail media*//
 if(data.extensions.hasOwnProperty('socialMedia')){
