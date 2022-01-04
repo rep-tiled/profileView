@@ -5,6 +5,8 @@ $.getJSON(searchName, function(data) {
     //auto hides//
     document.getElementById("Neos").hidden = true;
 
+    //set aref
+    var a = document.getElementById('userPhotoLink').href = "https://" + data.site;
 
     //set url field
     document.getElementById("site").textContent = "url: " + data.site;
