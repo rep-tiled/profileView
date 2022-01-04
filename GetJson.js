@@ -41,8 +41,25 @@ $.getJSON(searchName, function(data) {
         document.getElementById("friendCount").textContent = "0 friends";
     }
 
+    //neos username
+    if(data.extensions.socialMedia.neos.hasOwnProperty('username')){
+        document.getElementById("neosName").textContent = "Username: " + data.extensions.socialMedia.neos.username;
+        document.getElementById("neosName").hidden = false;
+    }
+    else
+    {
+        document.getElementById("neosName").textContent = "NO NEOS ACCOUNT FOUND";
+        document.getElementById("neosName").hidden = true;
+    }
 
-
+    //neos user-id
+    if(data.extensions.socialMedia.neos.hasOwnProperty('userID')){
+        document.getElementById("neosUserID").textContent =  data.extensions.socialMedia.neos.userID;
+    }
+    else
+    {
+        document.getElementById("neosUserID").textContent = "";
+    }
 });
 }
 //rep-tiled.tk//
