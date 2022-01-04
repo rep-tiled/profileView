@@ -5,15 +5,30 @@
 </head>
 <body>
     <!--include main script-->
-    <script src="setupvar.js"></script>
+    <script src="searchBarHit.js"></script>
     <script src="GetJson.js"></script>
     <!--search bar-->
-    <h1 id="name"></h1>
-    <input>
     
-    <script>
+    <input id="search">
+    <h1 id="name">Name:</h1>
 
-        getData('https://rep-tiled.tk/profile.json');
-        
+    <script>
+        var searchedName;
+        var finalSearch;
+        /*search url*/
+        var input = document.getElementById("search");
+        input.addEventListener("keyup", function(event) {
+        // enter
+        if (event.key === 'Enter') {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger
+        finalSearch = document.getElementById("search").value;
+        if(finalSearch.includes("/profile.json")){}else{finalSearch = finalSearch + "/profile.json"}
+        if(finalSearch.includes("https://")){}else{finalSearch = "https://" + finalSearch}
+
+        getData(finalSearch);
+        }
+        });
     </script>
 </body>
