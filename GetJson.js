@@ -22,6 +22,26 @@ $.getJSON(searchName, function(data) {
     {
         document.getElementById("pronouns").textContent = "";
     }
+    
+    //friends
+    if(data.hasOwnProperty('people')){
+        document.getElementById("people").textContent = "people: " + data.people;
+    }
+    else
+    {
+        document.getElementById("people").textContent = "No friends :(";
+    }
+
+    //friend count
+    if(data.hasOwnProperty('people')){
+        document.getElementById("friendCount").textContent = Object.keys(data.people).length + " friends";
+    }
+    else
+    {
+        document.getElementById("friendCount").textContent = "0 friends";
+    }
+
+
 
 });
 }
