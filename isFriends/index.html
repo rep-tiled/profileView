@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <head>
     <title>is friends?</title>
+    <!--script includes-->
+    <script src="../jQuery.js"></script>
 </head>
 <body>
+    <!--funcs-->
+    <script src="../reuseFuncs/friendCompare.js"></script>
+
+    <!--main area-->
+    <main>
     <label for="siteAField">site A:</label>
     <input id="siteAField">
     <label for="siteBField">site B:</label>
     <input id="siteBField">
+    
+
+    <button onclick="pingFriendForCheck()">check</button>
+
+    <script>
+        function pingFriendForCheck(){
+            var FriendA = "https://" + document.getElementById('siteAField').value + "/profile.json";
+            var FriendB = "https://" + document.getElementById('siteBField').value + "/profile.json";
+            var FriendANorm = document.getElementById('siteAField').value;
+            var FriendBNorm = document.getElementById('siteBField').value;
+
+            console.log(getData(FriendA, FriendB, FriendANorm, FriendBNorm));
+            
+        }
+    </script>
+    </main>
 </body>
