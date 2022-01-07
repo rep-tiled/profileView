@@ -6,7 +6,11 @@ $.getJSON(searchName, function(data) {
     document.getElementById("Neos").hidden = true;
 
     //set aref
-    var a = document.getElementById('userPhotoLink').href = "https://" + data.site;
+    var aref = data.site;
+    if(finalSearch.includes("/profile.json")){}else{aref = aref + "/profile.json"} //this is so gross, please don't do this
+    if(finalSearch.includes("https://")){}else{aref = "https://" + aref}
+
+    var a = document.getElementById('userPhotoLink').href = aref;
 
     //set url field
     document.getElementById("site").textContent = "url: " + data.site;

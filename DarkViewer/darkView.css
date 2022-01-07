@@ -1,0 +1,16 @@
+body{
+    background-color: #121212;
+    color: azure;
+    padding:0;
+    margin:0;
+}
+
+/*page head*/
+.topHead{
+    background-color: #1F1F1F;
+    padding: 0.5%;
+}
+
+.topLine{
+    display: inline;
+}
