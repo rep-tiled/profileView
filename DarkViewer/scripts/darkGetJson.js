@@ -9,10 +9,10 @@ function getData(searchName){
     
         //set aref
         var aref = data.site;
-        if(finalSearch.includes("/profile.json")){}else{aref = aref + "/profile.json"} //this is so gross, please don't do this
+        if(finalSearch.includes("/profile.json")){}else{aref = aref + "/profile.json"} //this is so gross
         if(finalSearch.includes("https://")){}else{aref = "https://" + aref}
     
-        var a = document.getElementById('userPhotoLink').href = aref;
+        document.getElementById('userPhotoLink').href = aref;
     
         //set url field
         document.getElementById("site").textContent = data.site;
