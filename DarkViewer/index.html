@@ -95,6 +95,8 @@
     </div>
     
     <script>
+        loadParms();
+        function loadParms(){
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const parmSite = urlParams.get('site')
@@ -109,6 +111,7 @@
             
             getData(finalSearch.replace('"', "").replace('"', ""));
         }  
+    }
     </script>
 
     <!--search script-->
@@ -134,8 +137,7 @@
         url.searchParams.set('site', finalSearch);
         window.history.pushState({}, '', url);
 
-        location.reload();
-     
+        loadParms();
         
         }
         });

@@ -4,7 +4,7 @@ function getData(searchName){
     searchName = searchName.replace(' ', '');
     $.getJSON(searchName, function(data) {
         // JSON result in data
-        
+
         //auto hides//
         document.getElementById("Neos").hidden = true;
         document.getElementById("Contacts").hidden = false;
@@ -19,6 +19,7 @@ function getData(searchName){
     
         //set url field
         document.getElementById("site").textContent = data.site;
+        document.title = data.site + "'s profile";
     
         //set name field
         if(data.hasOwnProperty('name')){
