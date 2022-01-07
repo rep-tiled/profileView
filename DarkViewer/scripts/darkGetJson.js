@@ -38,7 +38,7 @@ function getData(searchName){
     
         //set pronouns field
         if(data.hasOwnProperty('pronouns')){
-            document.getElementById("pronouns").textContent = data.pronouns;
+            document.getElementById("pronouns").textContent = "(" + data.pronouns + ")";
         }
         else
         {
