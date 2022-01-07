@@ -5,6 +5,7 @@ function getData(searchName){
         //auto hides//
         document.getElementById("Neos").hidden = true;
         document.getElementById("Contacts").hidden = false;
+        document.getElementById("site").hidden = false;
     
         //set aref
         var aref = data.site;
@@ -23,6 +24,7 @@ function getData(searchName){
         else
         {
             document.getElementById("name").textContent =  data.site;
+            document.getElementById("site").hidden = true;
         }
         
         //pfp
