@@ -94,8 +94,26 @@
 
     </div>
     
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const parmSite = urlParams.get('site')
+
+        if(urlParams.has('site')){
+            console.log(urlParams)
+            console.log(parmSite);
+
+            finalSearch = parmSite;
+            if(finalSearch.includes("/profile.json")){}else{finalSearch = finalSearch + "/profile.json"} //this is so gross, please don't do this
+            if(finalSearch.includes("https://")){}else{finalSearch = "https://" + finalSearch}
+            
+            getData(finalSearch.replace('"', "").replace('"', ""));
+        }  
+    </script>
+
     <!--search script-->
     <script>
+
         var searchedName;
         var finalSearch;
         /*search url*/
