@@ -56,11 +56,11 @@ function getData(searchName){
     
         //friend count
         if(data.hasOwnProperty('people')){
-            document.getElementById("friendCount").textContent = Object.keys(data.people).length + " friends";
+            document.getElementById("Contacts").textContent = Object.keys(data.people).length + " friends";
         }
         else
         {
-            document.getElementById("friendCount").textContent = "0 friends";
+            document.getElementById("Contacts").textContent = "0 friends";
         }
     
     //*extensions*//
