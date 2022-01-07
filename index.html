@@ -8,7 +8,7 @@
     <script src="GetJson.js"></script>
     <!--search bar-->
     <label for="search">site name:</label>
-    <input title="search" type="text" id="search" autocomplete="url">
+    <input title="search" type="text" id="search" autocomplete="url" placeholder="name.tk">
     <h1>Main</h1>
     <a id="userPhotoLink" href="">
     <img src="https://i.imgur.com/ZVA8eHl.png" alt="profilePhoto" width="300" height="300" id="pfp">
@@ -23,6 +23,13 @@
     <h2 id="neosName">NO NEOS ACCOUNT FOUND</h1>
     <h2 id="neosUserID"></h1>
     </div>
+
+    <!--recommendations-->
+    <datalist id="exampleUsers">
+        <option value="rep-tiled.tk"></option>
+        <option value="psychpsyo.tk"></option>
+    </datalist>
+
 
     <script>
         var searchedName;

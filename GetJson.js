@@ -24,6 +24,10 @@ $.getJSON(searchName, function(data) {
     if(data.hasOwnProperty('image')){
         document.getElementById('pfp').src=data.image;
     }
+    else
+    {
+        document.getElementById('pfp').src= "https://i.imgur.com/ZVA8eHl.png";
+    }
 
     //set pronouns field
     if(data.hasOwnProperty('pronouns')){
