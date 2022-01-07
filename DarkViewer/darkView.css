@@ -100,4 +100,23 @@ body{
     }
 
     /*profile*/
-    
+    details > summary {
+
+
+        background-color: var(--main-item-bg-color);
+        border: none;
+        cursor: pointer;
+        padding-top: 1%;
+        padding-bottom: 1%;
+      }
+
+      details > h2 {
+        background-color: #2e2e2e;
+        padding: 4px;
+        padding-top: 8px;
+        margin: 0;
+      }
+
+      .profileSubText{
+          color: grey;
+      }

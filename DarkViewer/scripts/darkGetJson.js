@@ -4,6 +4,7 @@ function getData(searchName){
         
         //auto hides//
         document.getElementById("Neos").hidden = true;
+        document.getElementById("Contacts").hidden = false;
     
         //set aref
         var aref = data.site;
@@ -13,15 +14,15 @@ function getData(searchName){
         var a = document.getElementById('userPhotoLink').href = aref;
     
         //set url field
-        document.getElementById("site").textContent = "url: " + data.site;
+        document.getElementById("site").textContent = data.site;
     
         //set name field
         if(data.hasOwnProperty('name')){
-            document.getElementById("name").textContent = "Name: " + data.name;
+            document.getElementById("name").textContent =  data.name;
         }
         else
         {
-            document.getElementById("name").textContent = "Name: " + data.site;
+            document.getElementById("name").textContent =  data.site;
         }
         
         //pfp
@@ -35,7 +36,7 @@ function getData(searchName){
     
         //set pronouns field
         if(data.hasOwnProperty('pronouns')){
-            document.getElementById("pronouns").textContent = "pronouns: " + data.pronouns;
+            document.getElementById("pronouns").textContent = data.pronouns;
         }
         else
         {
