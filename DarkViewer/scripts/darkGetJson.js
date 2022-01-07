@@ -1,4 +1,7 @@
 function getData(searchName){
+    //clean up
+    searchName = decodeURI(searchName);
+    searchName = searchName.replace(' ', '');
     $.getJSON(searchName, function(data) {
         // JSON result in data
         
