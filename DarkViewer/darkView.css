@@ -2,6 +2,7 @@ html{
     --main-bg-color: #121212;
     --main-item-bg-color: #1F1F1F;
     --main-txt-color: azure;
+    --sub-txt-color: grey;
 }
 
 body{
@@ -118,7 +119,7 @@ body{
       }
 
       .profileSubText{
-          color: grey;
+          color: var(--sub-txt-color);
       }
 
       .profileNoSelect{
@@ -130,4 +131,20 @@ body{
         user-select: none;                     
       }
 
-      
+      /*footer*/
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        margin-top: 1%;
+        width: 100%;
+        background-color: var(--main-item-bg-color);
+        color: white;
+        text-align: center;
+      }
+
+      .NoBlue
+      {
+         color: var(--sub-txt-color);
+         text-decoration: none;
+      }
