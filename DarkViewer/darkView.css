@@ -125,6 +125,11 @@ body{
         text-decoration: none;
       }
 
+      .cleanHyper{
+        color: var(--main-txt-color);
+        text-decoration: none;
+      }
+
       .profileSubText{
           color: var(--sub-txt-color);
       }

@@ -102,14 +102,14 @@ function getData(searchName){
         if(data.extensions.socialMedia.hasOwnProperty('twitter')){
             
             if(data.extensions.socialMedia.twitter.hasOwnProperty('link')){
-                document.getElementById("twitterLink").textContent =  data.extensions.socialMedia.twitter.link;
+                document.getElementById("twitterLink").textContent = "Twitter: " + data.extensions.socialMedia.twitter.link;
                 document.getElementById("twitterLink").href = data.extensions.socialMedia.twitter.link;
                 document.getElementById("twitterLink").hidden = false;
                 document.getElementById("CommonSocailMedias").hidden = false;
             }
 
             if(data.extensions.socialMedia.twitter.hasOwnProperty('name')){
-                document.getElementById("twitterLink").textContent =  data.extensions.socialMedia.twitter.name;
+                document.getElementById("twitterLink").textContent = "Twitter: " +data.extensions.socialMedia.twitter.name;
             }
         }
 
