@@ -6,7 +6,7 @@
 </head>
 <body>
     <!--funcs-->
-    <script src="../reuseFuncs/friendCompare.js"></script>
+    <script src="./friendCompare.js"></script>
 
     <!--main area-->
     <main>
@@ -14,20 +14,22 @@
     <input id="siteAField">
     <label for="siteBField">site B:</label>
     <input id="siteBField">
-    
 
     <button onclick="pingFriendForCheck()">check</button>
 
+    <h1 id="isFriendBool"></h1>
+
     <script>
-        function pingFriendForCheck(){
+        async function pingFriendForCheck(){
             var FriendA = "https://" + document.getElementById('siteAField').value + "/profile.json";
             var FriendB = "https://" + document.getElementById('siteBField').value + "/profile.json";
             var FriendANorm = document.getElementById('siteAField').value;
             var FriendBNorm = document.getElementById('siteBField').value;
+            var AIsFriend = false;
+            var BIsFriend = false;
 
-            console.log(getData(FriendA, FriendB, FriendANorm, FriendBNorm));
-            
-        }
+            getData(FriendA, FriendB, FriendANorm, FriendBNorm);
+        } 
     </script>
     </main>
 </body>
