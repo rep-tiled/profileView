@@ -51,7 +51,7 @@ function getData(searchName){
         
         //friends
         if(data.hasOwnProperty('people')){
-            document.getElementById("people").textContent = "contacts: " + data.people;
+            document.getElementById("people").textContent = data.people;
         }
         else
         {
