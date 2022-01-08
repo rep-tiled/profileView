@@ -9,6 +9,7 @@ function getData(searchName){
         document.getElementById("Neos").hidden = true;
         document.getElementById("Contacts").hidden = false;
         document.getElementById("site").hidden = false;
+        document.getElementById("CommonSocailMedias").hidden = true;
     
         //set aref
         var aref = data.site;
