@@ -116,6 +116,13 @@ body{
         padding: 4px;
         padding-top: 8px;
         margin: 0;
+        color: var(--main-txt-color);
+        text-decoration: none;
+      }
+
+      details > a {
+        color: var(--main-txt-color);
+        text-decoration: none;
       }
 
       .profileSubText{
