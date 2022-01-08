@@ -10,7 +10,9 @@ function getData(searchName){
         document.getElementById("Contacts").hidden = false;
         document.getElementById("site").hidden = false;
         document.getElementById("CommonSocailMedias").hidden = true;
-    
+        document.getElementById("githubLink").hidden = true;
+        document.getElementById("twitterLink").hidden = true;
+
         //set aref
         var aref = data.site;
         if(finalSearch.includes("/profile.json")){}else{aref = aref + "/profile.json"} //this is so gross
