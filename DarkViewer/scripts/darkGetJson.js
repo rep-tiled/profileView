@@ -9,6 +9,7 @@ function getData(searchName){
         document.getElementById("Neos").hidden = true;
         document.getElementById("Contacts").hidden = false;
         document.getElementById("site").hidden = false;
+        document.getElementById("userBio").hidden = true;
         document.getElementById("CommonSocailMedias").hidden = true;
         document.getElementById("githubLink").hidden = true;
         document.getElementById("twitterLink").hidden = true;
@@ -129,6 +130,17 @@ function getData(searchName){
         }
 
     }
+    
+    if(data.extensions.hasOwnProperty('profileNiceties')){
+
+        if(data.extensions.profileNiceties.hasOwnProperty('bio')){
+            document.getElementById("userBio").textContent = '"' + data.extensions.profileNiceties.bio + '"'
+            document.getElementById("userBio").hidden = false;
+        }
+
+    }
+    
+
     }
     
     });
