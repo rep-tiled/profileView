@@ -113,6 +113,19 @@ function getData(searchName){
             }
         }
 
+        if(data.extensions.socialMedia.hasOwnProperty('github')){
+
+            if(data.extensions.socialMedia.twitter.hasOwnProperty('link')){
+                document.getElementById("githubLink").textContent = "Github: " + data.extensions.socialMedia.github.link;
+                document.getElementById("githubLink").href = data.extensions.socialMedia.github.link;
+                document.getElementById("githubLink").hidden = false;
+                document.getElementById("CommonSocailMedias").hidden = false;
+            }
+
+            if(data.extensions.socialMedia.twitter.hasOwnProperty('name')){
+                document.getElementById("githubLink").textContent = "Github: " +data.extensions.socialMedia.github.name;
+            }
+        }
 
     }
     }
