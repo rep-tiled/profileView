@@ -15,8 +15,7 @@ function getData(searchName){
 
         //set aref
         var aref = data.site;
-        if(finalSearch.includes("/profile.json")){}else{aref = aref + "/profile.json"} //this is so gross
-        if(finalSearch.includes("https://")){}else{aref = "https://" + aref}
+        if(aref.includes("https://")){}else{aref = "https://" + aref}
     
         document.getElementById('userPhotoLink').href = aref;
     
