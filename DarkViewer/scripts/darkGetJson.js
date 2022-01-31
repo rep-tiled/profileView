@@ -58,7 +58,7 @@ function getData(searchName){
         }
         else
         {
-            document.getElementById("people").textContent = "No friends :(";
+            document.getElementById("people").textContent = "No Contacts :(";
         }
     
         //friend count
